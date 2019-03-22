@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>打工战士</title>
+  <title>爆肝物语</title>
   
-  
+  <subtitle>肝帝是怎样炼成的</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://slurpasser.github.io.git/"/>
