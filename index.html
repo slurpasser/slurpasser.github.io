@@ -341,7 +341,7 @@
 
     
 
-
+    
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -445,6 +445,17 @@
 
           
           
+            <span id="/2019/03/22/post-test/" class="leancloud_visitors" data-flag-title="post-test">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
 
           
 
@@ -467,11 +478,29 @@
       
         
           
-            <p><strong>第一篇文章，做个测试！</strong></p>
-<p><em>第一篇文章，做个测试！</em></p>
-<p><strong><em>第一篇文章，做个测试！</em></strong></p>
-<p><del>第一篇文章，做个测试！</del></p>
-
+            <p><strong>&#x7B2C;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#xFF0C;&#x505A;&#x4E2A;&#x6D4B;&#x8BD5;&#xFF01;</strong></p>
+<p><em>&#x7B2C;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#xFF0C;&#x505A;&#x4E2A;&#x6D4B;&#x8BD5;&#xFF01;</em></p>
+<p><strong><em>&#x7B2C;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#xFF0C;&#x505A;&#x4E2A;&#x6D4B;&#x8BD5;&#xFF01;</em></strong></p>
+<p><del>&#x7B2C;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#xFF0C;&#x505A;&#x4E2A;&#x6D4B;&#x8BD5;&#xFF01;</del></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
           
         
       
@@ -670,7 +699,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -717,6 +747,35 @@
 
     
 
+    
+      <div>
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      </div>
     
 
     
@@ -1168,6 +1227,74 @@
 
 
   
+  
+  <script>
+    
+    function showTime(Counter) {
+      var entries = [];
+      var $visitors = $('.leancloud_visitors');
+
+      $visitors.each(function() {
+        entries.push( $(this).attr('id').trim() );
+      });
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
+        .done(function({ results }) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.url;
+            var time = item.time;
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if (countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'f4hxvhCjVN9ixzDyU1exnaMU-gzGzoHsz')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'f4hxvhCjVN9ixzDyU1exnaMU-gzGzoHsz',
+                'X-LC-Key': 'hOzLFcUKLN24tXshpny1oocH',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            if ($('.post-title-link').length >= 1) {
+              showTime(Counter);
+            }
+          
+        });
+    });
+  </script>
+
+
 
   
 
