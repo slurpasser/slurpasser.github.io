@@ -1,0 +1,19 @@
+window._bd_share_main.F.module(&quot;view/like_view&quot;,function(e,t,n){e(&quot;like.css&quot;);var r=e(&quot;base/tangram&quot;).T,i=e(&quot;base/class&quot;).Class,s=e(&quot;conf/const&quot;),o=e(&quot;view/view_base&quot;),u=e(&quot;component/animate&quot;),a={btn:&quot;bdlikebutton&quot;,innerBtn:&quot;bdlikebutton-inner&quot;,add:&quot;bdlikebutton-add&quot;,text:&quot;bdlikebutton-text&quot;,count:&quot;bdlikebutton-count&quot;};t.View=i.create(function(e){function i(){var n=e.tag||&quot;&quot;;return r(&quot;.&quot;+a.btn).each(function(e,i){(!n||r(i).attr(s.CONFIG_TAG_ATTR)==n)&amp;&amp;t._entities.push(i)}),t._entities}function o(){var t=e,r=n[t.type];return t.likeText=t.likeText?t.likeText.substr(0,r[0]):r[1],t.likedText=t.likedText?t.likedText.substr(0,r[0]):r[2],t}function f(e){return r(e).parent().get(0)}var t=this,n={small:[4,&quot;\u9876&quot;,&quot;\u5df2\u9876\u8fc7&quot;],medium:[6,&quot;\u9876&quot;,&quot;\u60a8\u5df2\u9876\u8fc7&quot;],large:[10,&quot;\u8be5\u5185\u5bb9\u5bf9\u6211\u6709\u5e2e\u52a9&quot;,&quot;\u60a8\u5df2\u9876\u8fc7\uff0c\u8c22\u8c22\uff01&quot;]};t.render=function(e){var n=i(),s=a.btn,u=o();t._actBtnSet.className=a.innerBtn,t._actBtnSet.tagName=&quot;div&quot;,t._actBtnSet.maxDomDepth=1,r(n).each(function(e,n){var i=u.type,o=[];o.push(&apos;<div class="&apos;,a.innerBtn,&apos;" ',t._actbtnset.cmdattr,'="like">&apos;),o.push(&apos;<span class="&apos;,a.add,&apos;">+1</span>&apos;),o.push(&apos;<div class="&apos;,a.count,&apos;">\u52a0\u8f7d\u4e2d</div>&apos;),&quot;small&quot;!=i&amp;&amp;o.push(&apos;<div class="&apos;,a.text,&apos;">&apos;,u.likeText,&quot;</div>&quot;),o.push(&quot;</div>&quot;),r(n).html(o.join(&quot;&quot;)).addClass(s+&quot;-&quot;+u.color).addClass(s+&quot;-&quot;+u.type).addClass(s+&quot;-&quot;+u.type+&quot;-&quot;+u.color)})},t._init=function(){var n=e,i=n.type;r(t._entities).each(function(e,t){var s=r(&quot;.&quot;+a.innerBtn,t);s.mouseover(function(e){e=r.event(e||window.event);var o=e.relatedTarget;s.contains(o)||(&quot;small&quot;==i&amp;&amp;r(&quot;.&quot;+a.count,t).html(n.likeText),r(t).addClass(a.btn+&quot;-&quot;+n.type+&quot;-&quot;+n.color+&quot;-hover&quot;))}).mouseout(function(e){e=r.event(e||window.event);var o=e.relatedTarget;s.contains(o)||(&quot;small&quot;==i?r(&quot;.&quot;+a.count,t).html(n.count):r(&quot;.&quot;+a.text,t).html(n.likeText),r(t).removeClass(a.btn+&quot;-&quot;+n.type+&quot;-&quot;+n.color+&quot;-hover&quot;))})})},t.showDoneState=function(t){var n=e,i=f(t),s=a.text;&quot;small&quot;==n.type&amp;&amp;(s=a.count),r(&quot;.&quot;+s,i).html(n.likedText),r(i).removeClass(i,a.btn+&quot;-&quot;+n.type+&quot;-&quot;+n.color+&quot;-hover&quot;)},t.addOne=function(n,i){var s=e,o=f(n),l=r(&quot;.&quot;+a.add,o);l.show(),u.animate(l.get(0),{top:&quot;-25px&quot;,opacity:&quot;0&quot;},300,function(){l.hide(),l.css({top:&quot;0px&quot;,opacity:99})}),t.setNumber(i),r(o).removeClass(a.btn+&quot;-&quot;+s.type+&quot;-&quot;+s.color+&quot;-hover&quot;)},t.setNumber=function(e){r.type(e)==&quot;number&quot;&amp;&amp;r(t._entities).each(function(t,n){r(&quot;.&quot;+a.count,n).html(e)})}},o.ViewBase)});<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
