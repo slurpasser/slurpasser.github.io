@@ -5,9 +5,9 @@
   <subtitle>肝帝的自我修养</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://slurpasser.github.io.git/"/>
+  <link href="https://slurpasser.github.io/"/>
   <updated>2019-03-25T13:11:29.775Z</updated>
-  <id>https://slurpasser.github.io.git/</id>
+  <id>https://slurpasser.github.io/</id>
   
   <author>
     <name>slurpasser</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>post-test</title>
-    <link href="https://slurpasser.github.io.git/2019/03/22/post-test/"/>
-    <id>https://slurpasser.github.io.git/2019/03/22/post-test/</id>
+    <link href="https://slurpasser.github.io/2019/03/22/post-test/"/>
+    <id>https://slurpasser.github.io/2019/03/22/post-test/</id>
     <published>2019-03-22T09:20:07.000Z</published>
     <updated>2019-03-25T13:11:29.775Z</updated>
     
@@ -36,7 +36,7 @@
     </summary>
     
     
-      <category term="测试" scheme="https://slurpasser.github.io.git/tags/%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="https://slurpasser.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
