@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://slurpasser.github.io.git/"/>
-  <updated>2019-03-22T09:21:57.160Z</updated>
+  <updated>2019-03-25T13:11:29.775Z</updated>
   <id>https://slurpasser.github.io.git/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://slurpasser.github.io.git/2019/03/22/post-test/"/>
     <id>https://slurpasser.github.io.git/2019/03/22/post-test/</id>
     <published>2019-03-22T09:20:07.000Z</published>
-    <updated>2019-03-22T09:21:57.160Z</updated>
+    <updated>2019-03-25T13:11:29.775Z</updated>
     
     <content type="html"><![CDATA[<p><strong>&#x7B2C;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#xFF0C;&#x505A;&#x4E2A;&#x6D4B;&#x8BD5;&#xFF01;</strong></p><p><em>&#x7B2C;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#xFF0C;&#x505A;&#x4E2A;&#x6D4B;&#x8BD5;&#xFF01;</em></p><p><strong><em>&#x7B2C;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#xFF0C;&#x505A;&#x4E2A;&#x6D4B;&#x8BD5;&#xFF01;</em></strong></p><p><del>&#x7B2C;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#xFF0C;&#x505A;&#x4E2A;&#x6D4B;&#x8BD5;&#xFF01;</del></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
@@ -35,6 +35,8 @@
     
     </summary>
     
+    
+      <category term="测试" scheme="https://slurpasser.github.io.git/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
