@@ -98,24 +98,24 @@
 
 
 
-  <meta name="description" content="u0A3RjbTuL         document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);">
+  <meta name="description" content="var APP_ID = f4hxvhCjVN9ixzDyU1exnaMU-gzGzoHsz;  //输入个人LeanCloud账号AppID   var APP_KEY = hOzLFcUKLN24tXshpny1oocH;  //输入个人LeanCloud账号AppKey   AV.init({     appId: APP_ID,     appKey: APP_KEY   })">
 <meta property="og:type" content="website">
-<meta property="og:title" content="爆肝物语">
-<meta property="og:url" content="https://slurpasser.github.io.git/baidu_verify_u0A3RjbTuL.html">
+<meta property="og:title" content="top">
+<meta property="og:url" content="https://slurpasser.github.io.git/top/index.html">
 <meta property="og:site_name" content="爆肝物语">
-<meta property="og:description" content="u0A3RjbTuL         document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);">
+<meta property="og:description" content="var APP_ID = f4hxvhCjVN9ixzDyU1exnaMU-gzGzoHsz;  //输入个人LeanCloud账号AppID   var APP_KEY = hOzLFcUKLN24tXshpny1oocH;  //输入个人LeanCloud账号AppKey   AV.init({     appId: APP_ID,     appKey: APP_KEY   })">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-23T14:30:11.428Z">
+<meta property="og:updated_time" content="2019-03-25T13:37:49.609Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="爆肝物语">
-<meta name="twitter:description" content="u0A3RjbTuL         document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);">
+<meta name="twitter:title" content="top">
+<meta name="twitter:description" content="var APP_ID = f4hxvhCjVN9ixzDyU1exnaMU-gzGzoHsz;  //输入个人LeanCloud账号AppID   var APP_KEY = hOzLFcUKLN24tXshpny1oocH;  //输入个人LeanCloud账号AppKey   AV.init({     appId: APP_ID,     appKey: APP_KEY   })">
 
 
 
 
 
 
-  <link rel="canonical" href="https://slurpasser.github.io.git/baidu_verify_u0A3RjbTuL.html">
+  <link rel="canonical" href="https://slurpasser.github.io.git/top/">
 
 
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title> | 爆肝物语</title>
+  <title>top | 爆肝物语</title>
   
 
 
@@ -201,7 +201,7 @@
     </div>
     
       
-        <p class="site-subtitle">肝帝是养成日志</p>
+        <p class="site-subtitle">肝帝的自我修养</p>
       
     
     
@@ -237,6 +237,23 @@
     
 
     <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-top menu-item-active">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/top/" rel="section"><i class="menu-item-icon fa fa-fw fa-signal"></i> <br>排行榜</a>
 
   </li>
         
@@ -362,6 +379,9 @@
       
       
     
+      
+      
+    
     
 
   
@@ -378,7 +398,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">
+<h1 class="post-title" itemprop="name headline">top
 
 </h1>
 
@@ -398,7 +418,40 @@
       <div class="post-body">
         
         
-          u0A3RjbTuL<script>
+          <div id="post-rank"></div>
+
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
+<script>
+  var APP_ID = f4hxvhCjVN9ixzDyU1exnaMU-gzGzoHsz;  //输入个人LeanCloud账号AppID
+  var APP_KEY = hOzLFcUKLN24tXshpny1oocH;  //输入个人LeanCloud账号AppKey
+  AV.init({
+    appId: APP_ID,
+    appKey: APP_KEY
+  });
+
+  var query = new AV.Query('Counter');//表名
+  query.descending('time'); //结果按阅读次数降序排序
+  query.limit(10);  //最终只返回10条结果
+  query.find().then( response => {
+    var content = response.reduce( (accum, {attributes}) => {
+      accum += `<p><div class="prefix">热度 ${attributes.time} ℃</div><div><a href="${attributes.url}">${attributes.title}</a></div></p>`
+      return accum;
+    },"")
+    document.querySelector("#post-rank").innerHTML = content;
+  })
+  .catch( error => {
+    console.log(error);
+  });
+</script>
+
+<style type="text/css">
+  #post-rank {
+    text-align: center;
+  }
+  #post-rank .prefix {
+    color: #ff4d4f;
+  }
+</style><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -435,15 +488,6 @@
 
           </div>
           
-
-  
-    <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="slurpasser"></div>
-    </div>
-
-  
-
-
 
         </div>
         
@@ -489,6 +533,19 @@
 
               
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
             </nav>
           
@@ -603,6 +660,15 @@
   <span class="author" itemprop="copyrightHolder">slurpasser</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">1k</span>
+  
 
   
 </div>
@@ -622,6 +688,32 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
 
 
 
@@ -770,23 +862,6 @@
 
 
 
-
-  
-    <script>
-  window.livereOptions = {
-    refer: 'baidu_verify_u0A3RjbTuL.html'
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-</script>
-
-  
 
 
   
